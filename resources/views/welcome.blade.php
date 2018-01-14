@@ -5,9 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>数据加载测试</title>
 
     <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 <div class="app">
@@ -31,7 +36,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="word in data">
+        <tr v-for="word in data" v-cloak>
             <th scope="row">@{{ word.id }}</th>
             <td>@{{ word.keyword }}</td>
             <td>@{{ word.show }}</td>
