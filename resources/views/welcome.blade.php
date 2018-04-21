@@ -58,6 +58,7 @@
 </body>
 
 <script src="/js/app.js"></script>
+<script src="/test.txt"></script>
 <script>
     new Vue({
         el: '.app',
@@ -73,13 +74,13 @@
             getData() {
                 let id = this.id;
 
-                axios.get('/keywords', { params: { id: id } })
-                    .then(response => {
-                    let data = response.data.data;
-
-                this.data = this.data.concat(data);
-                this.id = data[data.length-1].id;
-            });
+//                axios.get('/keywords', { params: { id: id } })
+//                    .then(response => {
+//                    let data = response.data.data;
+//
+//                this.data = this.data.concat(data);
+//                this.id = data[data.length-1].id;
+//            });
             },
 
             menu() {
